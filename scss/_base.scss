@@ -37,6 +37,15 @@ $breakpoints: (
   }
 }
 
+//# Placeholders
+//display flex column
+%display-flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 //# Resets
 /*Getting rid of default parameters*/
 * {

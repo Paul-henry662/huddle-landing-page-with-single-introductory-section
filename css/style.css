@@ -4,6 +4,13 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+header {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 /*Getting rid of default parameters*/
 * {
   margin: 0;
@@ -33,7 +40,10 @@ body {
 
 header {
   grid-area: header;
-  background-color: lightblue;
+}
+header .logo {
+  max-width: 8.5rem;
+  margin-left: 8%;
 }
 
 .illustration {

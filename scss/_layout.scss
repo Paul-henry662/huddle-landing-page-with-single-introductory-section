@@ -23,7 +23,12 @@ body {
 
 header {
   grid-area: header;
-  background-color: lightblue;
+  @extend %display-flex-column;
+
+  .logo {
+    max-width: 8.5rem;
+    margin-left: 8%;
+  }
 }
 .illustration {
   grid-area: illustration;
