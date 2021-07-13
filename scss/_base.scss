@@ -22,9 +22,23 @@ $bodyWeight: 400;
 $bodySize: 1rem;
 
 //## Breakpoints
-$mobileBreak: 769px;
+$breakpoints: (
+  mobilePortrait: 640px,
+  tabletPortrait: 768px,
+  tabletLandscape: 1024px,
+  laptop: 1280px,
+);
+
+//# Mixins
+//Media queries
+@mixin mediaQuery($size) {
+  @media (min-width: map-get($breakpoints, $size)) {
+    @content;
+  }
+}
 
 //# Resets
+/*Getting rid of default parameters*/
 * {
   margin: 0;
   padding: 0;
@@ -33,6 +47,5 @@ $mobileBreak: 769px;
 body {
   min-height: 100vh;
   font: $bodyWeight $bodySize $bodyFontStack;
+  background: url("../images/bg-mobile.svg") no-repeat, $violet;
 }
-
-//# Mixins
