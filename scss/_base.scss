@@ -64,6 +64,7 @@ body {
   font: $bodyWeight $bodySize $bodyFontStack;
   color: $transparentWhite;
   background: url("../images/bg-mobile.svg") no-repeat, $violet;
+  background-size: contain;
 
   @include mediaQuery(mobileBreak) {
     background: url("../images/bg-desktop.svg") no-repeat, $violet;

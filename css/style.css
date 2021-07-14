@@ -30,6 +30,7 @@ body {
   font: 400 1rem "Open Sans", sans-serif;
   color: rgba(255, 255, 255, 0.8);
   background: url("../images/bg-mobile.svg") no-repeat, #674baf;
+  background-size: contain;
 }
 @media (min-width: 820px) {
   body {
