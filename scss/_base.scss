@@ -6,7 +6,10 @@
 //## Colors
 //### Primary
 $violet: hsl(257, 40%, 49%);
-$SoftMagenta: hsl(300, 69%, 71%);
+$softMagenta: hsl(300, 69%, 71%);
+//### Text
+$white: white;
+$transparentWhite: rgba(255, 255, 255, 0.8);
 
 //## Typography
 //### Headings
@@ -15,7 +18,7 @@ $headingWeights: (
   medium: 400,
   semiBold: 600,
 );
-$headingSize: 3rem;
+$headingSize: 1.5rem;
 //### Body
 $bodyFontStack: "Open Sans", sans-serif;
 $bodyWeight: 400;
@@ -23,10 +26,7 @@ $bodySize: 1rem;
 
 //## Breakpoints
 $breakpoints: (
-  mobilePortrait: 640px,
-  tabletPortrait: 768px,
-  tabletLandscape: 1024px,
-  laptop: 1280px,
+  mobileBreak: 820px,
 );
 
 //# Mixins
@@ -43,7 +43,13 @@ $breakpoints: (
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+}
+%display-flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 //# Resets
@@ -56,5 +62,11 @@ $breakpoints: (
 body {
   min-height: 100vh;
   font: $bodyWeight $bodySize $bodyFontStack;
+  color: $transparentWhite;
   background: url("../images/bg-mobile.svg") no-repeat, $violet;
+
+  @include mediaQuery(mobileBreak) {
+    background: url("../images/bg-desktop.svg") no-repeat, $violet;
+    background-size: cover;
+  }
 }
