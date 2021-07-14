@@ -13,7 +13,7 @@ body {
     "footer";
 
   @include base.mediaQuery(mobileBreak) {
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 2fr 6fr 1fr;
     grid-template-columns: 1.5fr 1fr;
     grid-template-areas:
       "header header"
@@ -34,6 +34,7 @@ header {
 
     @include base.mediaQuery(mobileBreak) {
       margin-left: 5%;
+      max-width: 25%;
     }
   }
 }
